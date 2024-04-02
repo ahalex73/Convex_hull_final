@@ -40,27 +40,27 @@ def find_convex_hull(list_of_points):
 
     return hull
 
-n = 100
-points = []
+# n = 100
+# points = []
 
-for p in range(n):
-    x = random.uniform(-1, 1)
-    y = random.uniform(-1, 1)
-    new_point = [x, y]
-    points.append(new_point)
+# for p in range(n):
+#     x = random.uniform(-1, 1)
+#     y = random.uniform(-1, 1)
+#     new_point = [x, y]
+#     points.append(new_point)
 
-#hull = find_convex_hull(points)
-#print(hull)
+# #hull = find_convex_hull(points)
+# #print(hull)
 
-n = 10
-points = []
-for m in range(n):
-    x = random.uniform(-1, 1)
-    y = random.uniform(-1, 1)
-    new_point = [x, y]
-    points.append(new_point)
+# n = 10
+# points = []
+# for m in range(n):
+#     x = random.uniform(-1, 1)
+#     y = random.uniform(-1, 1)
+#     new_point = [x, y]
+#     points.append(new_point)
 
-print(points)
-print("\n\n")
-hull = find_convex_hull(points)
-print(hull)
+# print(points)
+# print("\n\n")
+# hull = find_convex_hull(points)
+# print(hull)

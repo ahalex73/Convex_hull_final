@@ -1,0 +1,2 @@
+
+    x, y = line.split(',')
