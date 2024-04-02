@@ -1,7 +1,7 @@
 import random
 import math
 
-#random.seed(1)
+# random.seed(1)
 
 def conversion(oldlist):
     newlist = []
