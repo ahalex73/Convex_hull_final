@@ -56,3 +56,5 @@ def test_star():
     assert sorted(graham_scan_result) == sorted(known_star)
     assert sorted(jarvis_march_result) == sorted(known_star)
     assert sorted(monotone_chain_result) == sorted(known_star)
+
+
