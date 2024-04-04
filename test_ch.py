@@ -11,6 +11,7 @@ def test_square():
     graham_scan_result = find_convex_hull(input_points)
     #jarvis_march_result = jarvis_march_convex_hull(input_points)
     monotone_chain_result = monotone_chain(input_points)
+    print(monotone_chain_result)
 
 
     assert sorted(graham_scan_result) == sorted(known_square_convex_hull)
