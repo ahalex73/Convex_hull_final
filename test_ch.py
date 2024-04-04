@@ -9,13 +9,13 @@ def test_square():
     known_square_convex_hull = [(0,0),(0,4),(4,4),(4,0),(0,0)] 
     
     graham_scan_result = find_convex_hull(input_points)
-    jarvis_march_result = jarvis_march_convex_hull(input_points)
-    #monotone_chain_result = monotone_chain(input_points)
+    #jarvis_march_result = jarvis_march_convex_hull(input_points)
+    monotone_chain_result = monotone_chain(input_points)
 
-        
+
     assert sorted(graham_scan_result) == sorted(known_square_convex_hull)
-    assert sorted(jarvis_march_result) == sorted(known_square_convex_hull)
-    #assert sorted(monotone_chain_result) == sorted(known_square_convex_hull)
+    #assert sorted(jarvis_march_result) == sorted(known_square_convex_hull)
+    assert sorted(monotone_chain_result) == sorted(known_square_convex_hull)
 
 
 # def test_square():

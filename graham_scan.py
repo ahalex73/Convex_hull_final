@@ -49,8 +49,8 @@ def find_convex_hull(list_of_points):
 #     new_point = [x, y]
 #     points.append(new_point)
 
-#hull = find_convex_hull(points)
-#print(hull)
+# hull = find_convex_hull(points)
+# print(hull)
 
 # n = 10
 # points = []
