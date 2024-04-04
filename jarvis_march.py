@@ -12,7 +12,7 @@ def convex_direction(pStart, qMid, rEnd):
     return 1 if convex_val > 0 else 2  # Clockwise or Counterclockwise
 
 
-def convex_hull(points):
+def jarvis_march_convex_hull(points):
     """
     This Function is to compute the convex hull of a set of points using the Gift Wrapping Algorithm (Jarvis March).
     """
@@ -47,13 +47,13 @@ def convex_hull(points):
     return [points[i] for i in hull]
 
 # main function to run the program with data points
-def main():
-    points = [(0, 3), (2, 2), (1, 1), (2, 1), (3, 0), (0, 0), (3, 3)]
-    points2 = [(0, 0), (1, 4), (3, 1), (3, 3), (5, 2), (5, 5), (7, 0), (9, 6)]
-    print("Convex Hull 1:", convex_hull(points))
-    print("Convex Hull 2:", convex_hull(points2))
-    print("This is considered a Convex Hull from the given points")
+# def main():
+#     points = [(0, 3), (2, 2), (1, 1), (2, 1), (3, 0), (0, 0), (3, 3)]
+#     points2 = [(0, 0), (1, 4), (3, 1), (3, 3), (5, 2), (5, 5), (7, 0), (9, 6)]
+#     print("Convex Hull 1:", convex_hull(points))
+#     print("Convex Hull 2:", convex_hull(points2))
+#     print("This is considered a Convex Hull from the given points")
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
