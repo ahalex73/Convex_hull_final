@@ -19,8 +19,8 @@ def monotone_chain(points):
 			upper.pop()
 		upper.append(p)
 
-	# Return combined hull, ignore the last points in the list
-	# as they are duplicates of the starting points in the lists
+	# Return combined hull, ignore the last point in the lower list
+	# as it is a duplicate of the starting points in the upper list
 	hull = lower[:-1] + upper
 	return hull
 
