@@ -3,21 +3,23 @@ This file is responsible for parsing test data from different files into a list 
 """
 from graham_scan import *
 
+def parse_file_for_known_convex_hull(file_name):
+    file = open(file_name, "r")
+    i = 1
+    list_of_points = []
 
-file = open("eclipse_text_points.csv", "r")
-i = 1
-list_of_points = []
+    for line in file:
+        x,y = line.split(',')
+        x = float(x)
+        y = float(y)
+        list_of_points.append((x,y))
 
-for line in file:
-    x,y = line.split(',')
-    x = float(x)
-    y = float(y)
-    list_of_points.append((x,y))
-
-    i += 1
+        i += 1
 
 
-print(list_of_points)
+    return list_of_points
 
-# ch = find_convex_hull(list_of_points)
-# print(ch)
+eclipse_points = parse_file_for_known_convex_hull("eclipse_text_points.csv")
+star_points = parse_file_for_known_convex_hull("star_text_points.csv")
+print(eclipse_points, "\n")
+print(star_points)

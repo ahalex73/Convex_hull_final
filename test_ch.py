@@ -23,9 +23,7 @@ def test_eclipse():
     graham_scan_result = find_convex_hull(input_points.copy())
     jarvis_march_result = jarvis_march_convex_hull(input_points.copy())
     monotone_chain_result = monotone_chain(input_points.copy())
-
-    print(sorted(jarvis_march_result))
-
+    
     # Known convex hull of eclipse of 200 points - should just rank based off the -x -> +x space
     known_eclipse = ((-0.447027, 0.434093), (-0.44663, 0.423787), (-0.44507, 0.40134), (-0.44497, 0.400227), (-0.444031, 0.390771),
                     (-0.442417, 0.377094), (-0.440513, 0.363387), (-0.439449, 0.356473), (-0.43935, 0.355852), (-0.430483, 0.309305),
@@ -42,7 +40,20 @@ def test_eclipse():
     assert sorted(monotone_chain_result) == sorted(known_eclipse)
 
 
-# def test_star():
-#     """ Test Convex hull against circle"""
-#     known_star_convex_hull = []
+def test_star():
+    """ Test convex hulls against an star """
+    input_points = [(0.9510565162951535, 0.3090169943749474), (0.22451398828979272, 0.3090169943749474), (-0.9510565162951535, 0.3090169943749475),
+                    (-0.3632712640026805, -0.11803398874989464), (0.5877852522924729, -0.8090169943749476), (0.3632712640026804, -0.11803398874989492),
+                    (0.01, 0.0), (-0.22451398828979263, 0.30901699437494745), (-0.5877852522924732, -0.8090169943749473), (0.0, -0.38196601125010515)]
+    
+    graham_scan_result = find_convex_hull(input_points.copy())
+    jarvis_march_result = jarvis_march_convex_hull(input_points.copy())
+    monotone_chain_result = monotone_chain(input_points.copy())
 
+    # Known convex hull of eclipse of 200 points - should just rank based off the -x -> +x space
+    known_star = [(-0.9510565162951535, 0.3090169943749475), (-0.5877852522924732, -0.8090169943749473), (0.5877852522924729, -0.8090169943749476),
+                   (0.9510565162951535, 0.3090169943749474), (-0.9510565162951535, 0.3090169943749475)]
+
+    assert sorted(graham_scan_result) == sorted(known_star)
+    assert sorted(jarvis_march_result) == sorted(known_star)
+    assert sorted(monotone_chain_result) == sorted(known_star)
