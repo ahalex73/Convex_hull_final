@@ -1,10 +1,9 @@
-from graham_scan import cross_product as c
-import matplotlib as mp
-import matplotlib.animation as mpa
+from graham_scan import cross_product as cross
+
 
 def monotone_chain(points):
-
-	points = sorted(set(points))
+	# sort the points based on the x coordinate
+	points.sort()
 
 	# Build lower hull
 	lower = []
