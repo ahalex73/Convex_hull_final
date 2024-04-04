@@ -23,8 +23,3 @@ def monotone_chain(points):
 	# as it is a duplicate of the starting points in the upper list
 	hull = lower[:-1] + upper
 	return hull
-
-
-
-input_points = [(0,0),(0,4),(1,1),(2,1),(3,1),(1,2),(2,2),(3,2),(1,3),(2,3),(3,3),(4,4),(4,0)]
-print(monotone_chain(input_points))
