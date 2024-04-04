@@ -45,18 +45,7 @@ def jarvis_march_convex_hull(points):
 
     # Output result
     convex_hull = [points[i] for i in hull]
+    points.sort()
     convex_hull.append(points[0])
 
     return convex_hull
-
-
-# def main():
-#     points = [(0,0),(0,4),(1,1),(2,1),(3,1),(1,2),(2,2),(3,2),(1,3),(2,3),(3,3),(4,4),(4,0)]
-#     points2 = [(0, 0), (1, 4), (3, 1), (3, 3), (5, 2), (5, 5), (7, 0), (9, 6)]
-#     print("Convex Hull 1:", jarvis_march_convex_hull(points))
-#     print("Convex Hull 2:", jarvis_march_convex_hull(points2))
-#     print("This is considered a Convex Hull from the given points")
-
-
-# if __name__ == "__main__":
-#     main()

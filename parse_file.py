@@ -12,9 +12,12 @@ for line in file:
     x,y = line.split(',')
     x = float(x)
     y = float(y)
-    list_of_points.append([x,y])
+    list_of_points.append((x,y))
 
     i += 1
 
-ch = find_convex_hull(list_of_points)
-print(ch)
+
+print(list_of_points)
+
+# ch = find_convex_hull(list_of_points)
+# print(ch)
