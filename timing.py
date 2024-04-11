@@ -6,9 +6,9 @@ import random
 
 x = []
 y = []
-for b in range(4):
+size = [10, 50, 100, 500, 1000, 2000, 4000, 6000, 8000, 10000]
+for n in size:
     points = []
-    n = pow(10, b + 1)
     for p in range(n):
         x = random.uniform(-1, 1)
         y = random.uniform(-1, 1)
