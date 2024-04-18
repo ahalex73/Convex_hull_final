@@ -19,7 +19,6 @@ def find_convex_hull(list_of_points):
     start = list_of_points.pop(0)
     hull.append(start)
 
-    list_of_points.sort(key=lambda p: (slope(p, start), -p[1], p[0]))
     for pt in list_of_points:
         hull.append(pt)
         while len(hull) > 2 and cross_product(hull[-3], hull[-2], hull[-1]) < 0:
